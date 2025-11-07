@@ -1,0 +1,204 @@
+<!doctype html>
+
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tips de Modelaje - Moda (Rosa)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pink-1: #ffd6e8;
+      --pink-2: #ff9fc9;
+      --accent: #ff5aa8;
+      --text: #3a2b33;
+      --glass: rgba(255,255,255,0.55);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color:var(--text);
+      background: linear-gradient(135deg,var(--pink-1) 0%, #fff 40%);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }.container{
+  width:100%;
+  max-width:1100px;
+  border-radius:18px;
+  box-shadow:0 20px 50px rgba(133,55,110,0.12);
+  overflow:hidden;
+  background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,250,253,0.6));
+  backdrop-filter: blur(6px);
+  border:1px solid rgba(255,255,255,0.6);
+}
+
+header{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:18px 28px;
+}
+.logo{
+  width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--pink-2));
+  display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:22px;font-family:'Playfair Display';
+  box-shadow:0 6px 18px rgba(255,90,160,0.18);
+}
+.title{
+  display:flex;flex-direction:column;
+}
+.title h1{margin:0;font-size:18px;letter-spacing:0.2px}
+.title p{margin:0;font-size:13px;color:#6a525f}
+
+.main{
+  display:grid;
+  grid-template-columns: 1fr 380px;
+  gap:28px;
+  padding:18px 28px 32px 28px;
+}
+
+/* Video card */
+.video-card{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  background:linear-gradient(180deg, #fff, rgba(255,240,247,0.6));
+  box-shadow:0 8px 30px rgba(128,50,90,0.08);
+}
+.video-wrap{
+  position:relative;
+  padding-top:56.25%; /* 16:9 */
+  background:linear-gradient(135deg, rgba(255,160,200,0.08), rgba(255,230,245,0.06));
+}
+.video-wrap iframe{
+  position:absolute;inset:0;border:0;width:100%;height:100%;
+}
+
+/* decorative overlay */
+.ribbon{
+  position:absolute;right:18px;top:18px;background:var(--accent);color:white;padding:8px 12px;border-radius:999px;font-weight:600;font-size:13px;box-shadow:0 6px 18px rgba(255,90,160,0.2);
+}
+
+.video-info{padding:18px}
+.video-info h2{margin:0 0 8px 0;font-family:'Playfair Display';font-size:20px}
+.meta{display:flex;gap:12px;align-items:center;color:#6a525f;font-size:14px}
+.meta .chip{background:var(--glass);padding:6px 10px;border-radius:999px}
+
+/* Right column */
+.sidebar{
+  padding:16px;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,245,250,0.6));border-radius:12px;height:100%;
+}
+.subscribe{
+  display:flex;gap:12px;align-items:center;margin-bottom:14px;
+}
+.subscribe button{
+  background:var(--accent);border:0;color:white;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer;box-shadow:0 8px 20px rgba(255,90,160,0.18);
+}
+.tips{margin-top:8px}
+.tip{background:linear-gradient(90deg, rgba(255,255,255,0.8), rgba(255,245,250,0.8));padding:12px;border-radius:10px;margin-bottom:10px;box-shadow:0 6px 16px rgba(130,60,90,0.04)}
+.tip h3{margin:0 0 4px 0;font-size:15px}
+.tip p{margin:0;color:#6a525f;font-size:13px}
+
+footer{padding:16px 28px;background:linear-gradient(180deg, rgba(255,255,255,0.5), transparent);display:flex;justify-content:space-between;align-items:center}
+.credits{font-size:13px;color:#6a525f}
+
+/* responsive */
+@media (max-width:900px){
+  .main{grid-template-columns:1fr;}
+  .sidebar{order:2}
+}
+
+/* subtle animated decor */
+.sparkles{position:absolute;left:-40px;top:-30px;opacity:0.85;pointer-events:none;}
+.sparkle{width:120px;height:120px;border-radius:50%;background:radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9), rgba(255,255,255,0.1));filter:blur(12px);transform:rotate(12deg);}
+@keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.float{animation:floaty 6s ease-in-out infinite}
+
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="logo">MZ</div>
+      <div class="title">
+        <h1>Moda & Modelaje — Tips femeninos</h1>
+        <p>Vídeos cortos con estilo, confianza y actitud.</p>
+      </div>
+    </header><div class="main">
+  <div class="video-card">
+    <div class="video-wrap">
+      <!-- Reemplaza VIDEO_ID_HERE con el ID de tu video de YouTube -->
+      <iframe id="ytplayer" src="https://www.youtube.com/embed/VIDEO_ID_HERE?rel=0&showinfo=0" title="Tips de modelaje" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="ribbon">Nuevo</div>
+    <div class="video-info">
+      <h2>5 Tips esenciales para caminar en pasarela con confianza</h2>
+      <div class="meta">
+        <div class="chip">Moda • 10 min</div>
+        <div class="chip">Publicado: 2025</div>
+      </div>
+      <p style="margin-top:12px;color:#614551;">Aprende postura, mirada, ritmo y trucos para que tu actitud en pasarela se note desde el primer paso. Perfecto para principiantes y quienes quieren pulir su presencia.</p>
+    </div>
+  </div>
+
+  <aside class="sidebar" aria-label="Información y tips">
+    <div class="subscribe">
+      <img src="https://via.placeholder.com/64x64.png?text=👗" alt="canal" style="border-radius:10px;">
+      <div style="flex:1">
+        <div style="font-weight:700">ModaChic</div>
+        <div style="font-size:13px;color:#6a525f">Consejos, looks y rutinas</div>
+      </div>
+      <!-- Reemplaza CHANNEL_URL_HERE por la URL de tu canal -->
+      <button id="subscribeBtn" aria-label="Suscribirse">Suscribirme</button>
+    </div>
+
+    <div class="tips">
+      <div class="tip">
+        <h3>Tip 1 — Postura</h3>
+        <p>Mantén la espalda recta, cabeza erguida y hombros relajados. Practica frente al espejo.</p>
+      </div>
+      <div class="tip">
+        <h3>Tip 2 — Mirada</h3>
+        <p>Fija un punto lejano, suaviza la expresión y evita parpadear en los momentos clave.</p>
+      </div>
+      <div class="tip">
+        <h3>Tip 3 — Ritmo</h3>
+        <p>Camina con pasos constantes, jugando ligeramente con el tempo para enfatizar prendas.</p>
+      </div>
+      <div class="tip">
+        <h3>Tip 4 — Práctica</h3>
+        <p>Graba tus ensayos y corrige postura y movimientos. La repetición crea confianza.</p>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="credits">Diseño rosa • Estilo femenino • 2025</div>
+  <div style="font-size:13px;color:#6a525f">¿Quieres personalizar colores, tipografías o reemplazar el video?</div>
+</footer>
+
+<!-- decor -->
+<div class="sparkles float" style="right: -40px; bottom: -30px; opacity:0.6;">
+  <div class="sparkle"></div>
+</div>
+
+  </div>  <script>
+    // Interactividad básica
+    document.getElementById('subscribeBtn').addEventListener('click', function(){
+      const channelUrl = 'https://www.youtube.com/channel/CHANNEL_ID_HERE'; // reemplaza por tu canal
+      window.open(channelUrl, '_blank');
+    });
+
+    // Reemplazo simple: si quieres que el iframe autoplay al hacer click en miniatura, etc.
+    // Accesibilidad: agrega teclado para suscribirse
+    document.getElementById('subscribeBtn').addEventListener('keyup', function(e){
+      if(e.key === 'Enter' || e.key === ' ') this.click();
+    });
+  </script></body>
+</html>
